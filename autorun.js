@@ -8,7 +8,7 @@ function onNewMessageComposeHandler(event) {
         var xmlhttp = new XMLHttpRequest();
 
         xmlhttp.onload = () => {
-            insertDebugSignature("CORS OK", event);
+            insertDebugSignature("CORS OK: " + xmlhttp.responseText, event);
         };
 
         xmlhttp.onerror = () => {
