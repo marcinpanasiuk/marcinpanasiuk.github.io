@@ -15,7 +15,7 @@ function onNewMessageComposeHandler(event) {
             insertDebugSignature(xmlhttp.responseText, event)
         }
 
-        xmlhttp.open("POST", 'https://esig365lane1ring2-public-api.esig365.net/api/v2/clientsignatures/default');
+        xmlhttp.open("POST", 'https://jsonplaceholder.typicode.com/posts');
         xmlhttp.setRequestHeader("Content-Type", "application/json");
         xmlhttp.setRequestHeader("Authorization", "Bearer test-token");
         xmlhttp.send(JSON.stringify({test: "value"}));
