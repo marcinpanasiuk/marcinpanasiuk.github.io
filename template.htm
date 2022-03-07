@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Manage your subscriptions and licenses for CodeTwo Email Signatures for Office 365." />
+    <meta name="robots" content="index, follow" />
+    <title>Log in to CodeTwo Admin Panel</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css" />
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+</head>
+
+
+<body class="has-navbar has-footer">
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+
+                <a href="https://emailsignatures365.codetwo.com" class="navbar-brand" rel="nofollow">
+                    <img src="/images/esig_navbar_c2_logo.svg" alt="CodeTwo">
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="page-header-lines"></div>
+
+    <div class="container">
+        <div class="text-center">
+            <h1 class="page-header"><a href="https://www.codetwo.com/email-signatures" target="_blank">CodeTwo Email Signatures for Office 365</a></h1>
+        </div>
+
+        <div class="row">
+            <div class="col-md-offset-1 col-md-10 col-lg-offset-2 col-lg-8">
+            </div>
+        </div>
+
+
+        <div id="api"></div>
+
+
+        <!--<h2 class="text-center login-header">Log in with</h2>
+
+        <div class="row login-panel">
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-11 col-lg-offset-1 col-lg-10 login-panel-content">
+
+                        <h2>Microsoft Work or School account</h2>
+                        <a class="btn btn-primary btn-lg btn-block btn-lg-margin" id="Microsoft" rel="nofollow" href="/Account/ExternalLogin?provider=Microsoft">
+                            <img src="/images/esig_login_microsoft_logo.svg" alt="Microsoft">
+                            Microsoft account
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 login-col-line">
+                <div class="login-or">OR</div>
+                <div class="row">
+                    <div class="col-md-offset-1 col-md-11 col-lg-10 login-panel-content">
+
+
+
+                        <h2>Email and password</h2>
+
+                        <form action="/" class="form-horizontal form-login jsGoogleRecaptcha" data-disable-verification="False" data-sitekey="6LdePNcZAAAAADkkDuIkazrmxozBvNRiRBjxkR5o" method="post" onsubmit="return false" role="form">
+                            <div class="form-group">
+                                <div class="col-md-12">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-12">
+                                    <input class="form-control" data-val="true" data-val-email="The Email field is not a valid e-mail address." data-val-required="The Email field is required." id="UserName" name="UserName" placeholder="Email" type="text" value="" />
+                                    <div class="help-block">
+                                        <span class="field-validation-valid text-danger" data-valmsg-for="UserName" data-valmsg-replace="true"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-12">
+                                    <input class="form-control" data-val="true" data-val-required="The Password field is required." id="Password" name="Password" placeholder="Password" type="password" />
+
+                                    <div class="jsHideWhenDependsIsAutofilled" data-source="#Password">
+                                        <div class="forgot-password jsVisibilityDepends" data-source="#Password" data-value="" data-check-on-keyup="true">
+                                            <a href="/Account/ForgotPassword" id="ForgotPassword" rel="nofollow">Forgot your password?</a>
+                                        </div>
+                                    </div>
+                                    <div class="help-block">
+                                        <span class="field-validation-valid text-danger" data-valmsg-for="Password" data-valmsg-replace="true"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-12">
+                                    <div class="checkbox">
+                                        <label for="RememberMe">
+                                            <input data-val="true" data-val-required="The Keep me logged in field is required." id="RememberMe" name="RememberMe" type="checkbox" value="true" />
+                                            Keep me logged in
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-12">
+                                    <button type="submit" name="button" value="login" class="btn btn-primary btn-lg btn-block btn-lg-margin-top btn-margin-bottom" id="Login" disabled>Log in</button>
+                                    <div class="text-right">
+                                        <a href="/Account/ResendConfirmEmail" rel="nofollow">Resend activation link</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <input name="__RequestVerificationToken" type="hidden" value="CfDJ8M6UDMJIlLRIhrSIVgS_MGdqw-CTOnW2PIos6NrumkdC-q1soJI8M90sfsZPJ6j82OmaIJT2Z9tt8PzGi7Mt-AmhaNGN3EFxz8O3zCx1syRImilsTE_5cnXpXStxIIScHMTHbGqooXahgMjvnG39nf0" /><input name="RememberMe" type="hidden" value="false" />
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row btn-lg-margin">
+            <div class="col-md-12 text-center">
+                <p><a href="/Account/Create" id="Create" rel="nofollow">No account? Create one for free</a><br /><small>No credit card required</small></p>
+            </div>
+        </div>
+        <div class="row btn-lg-margin">
+            <div class="col-md-12 text-center">
+                <p><a href="https://emailsignatures365.codetwo.com/Signatures/Index" target="_blank" rel="nofollow">Manage Signatures</a><br /><small>Go straight to managing signatures for your tenant</small></p>
+            </div>
+        </div>-->
+
+
+
+
+        <div class="footer visible-xs visible-sm">
+            <p>
+                <a href="https://www.codetwo.com/email-signatures" target="_blank">Product page</a><br />
+                <a href='https://www.codetwo.com/company/contact?sts=5263' target='_blank'>Contact</a><br />
+                <a href='https://www.codetwo.com/regulations/privacy?sts=5263' target='_blank'>Privacy Policy</a><br />
+                <a href='https://www.codetwo.com/regulations/sales-and-services?sts=5263' target='_blank'>Terms and Conditions of Sales and Services</a>
+            </p>
+
+            <p>
+                Copyright 2022 CodeTwo. All rights reserved.
+            </p>
+
+            <p>
+                <a href="https://www.codetwo.com/" target="_blank"><img src="/images/esig_footer_mspartner_logo.svg" alt="Microsoft Partner" /></a>
+            </p>
+        </div>
+    </div>
+
+    <div class="footer footer-fixed visible-md visible-lg">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-left">
+                    <p>
+                        <a href="https://www.codetwo.com/" target="_blank">
+                            <img src="/images/esig_footer_mspartner_logo.svg" alt="Microsoft Partner" />
+                        </a>
+                        Copyright 2022 CodeTwo. All rights reserved.
+                    </p>
+                </div>
+
+                <div class="col-md-6 text-right">
+                    <p>
+                        <a href="https://www.codetwo.com/email-signatures" target="_blank">Product page</a>
+                        <a href='https://www.codetwo.com/company/contact?sts=5263' target='_blank'>Contact</a>
+                        <a href='https://www.codetwo.com/regulations/privacy?sts=5263' target='_blank'>Privacy Policy</a>
+                        <a href='https://www.codetwo.com/regulations/sales-and-services?sts=5263' target='_blank'>Terms and Conditions of Sales and Services</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container cookie-law jsCookieLaw" data-cookie-name="cookielaw" data-close=".close" style="display:none">
+        <div class="row">
+            <div class="col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8 col-lg-offset-3 col-lg-6">
+                <button type="button" id="CookieLawClose" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <p>
+                    This website uses HTTP cookies for web analytics and marketing purposes. The statistical data is collected anonymously, and no information is disclosed to 3rd parties.
+                    You can block saving cookie files to your hard drive at any time by changing the settings of your web browser - learn more in
+                    <a href='https://www.codetwo.com/regulations/privacy?sts=5263' target='_blank'>Privacy Policy</a>.
+                    <a href="https://en.wikipedia.org/wiki/HTTP_cookie" target="_blank" rel="nofollow">What are http cookies?</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
