@@ -12,11 +12,138 @@
     <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css" />
 
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="bootstrap.css" crossorigin="anonymous">
 
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <style>
+        /* odstęp od górnej krawędzi strony gdy wyświetlany jest pasek głównego menu */
+        body.has-navbar {
+            padding-top: 56px;
+        }
+        /* odstęp od dolnej krawędzi strony gdy wyświetlana jest stopka */
+        @media (min-width: 992px) {
+            body.has-footer {
+                padding-bottom: 90px;
+            }
+        }
 
+        /* nawigacja */
+
+        .nav img {
+            padding-top: 2px;
+            vertical-align: top;
+        }
+
+        .navbar {
+            border-bottom-width: 3px;
+            border-bottom-color: #3695ff;
+            border-bottom-style: solid;
+        }
+
+            .navbar .container {
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+
+        .navbar-brand {
+            padding: 4px 15px;
+            min-width: 162px;
+        }
+
+        /* nagłówek strony */
+        .page-header-lines {
+            margin-top: 5px;
+            margin-bottom: -90px;
+            height: 59px;
+            text-align: center;
+            border-bottom-width: 2px;
+            border-bottom-style: solid;
+            border-bottom-color: #444444;
+        }
+
+        .page-header {
+            display: inline-block;
+            margin-top: 75px;
+            margin-bottom: 30px;
+            padding-left: 50px;
+            padding-right: 50px;
+            text-align: center;
+            background-color: #ffffff;
+            border: none;
+        }
+
+            .page-header > a {
+                color: inherit;
+                text-decoration: none;
+            }
+
+                .page-header > a:hover {
+                    text-decoration: underline;
+                }
+        /* tekst wprowadzający na stronie */
+        .page-description {
+            margin-bottom: 30px;
+        }
+        /* alerty */
+        .alert {
+            margin-bottom: 30px;
+            padding: 16px 16px 5px 16px;
+            min-height: 54px;
+            background-repeat: no-repeat;
+            background-position: 17px 17px;
+            border: 1px solid;
+        }
+
+        /* stopka */
+        .footer {
+            margin-top: 30px;
+            color: #8f8f8f;
+            text-align: center;
+            font-size: 12px;
+        }
+
+            .footer a {
+                color: #8f8f8f;
+                text-decoration: none;
+            }
+
+                .footer a:hover {
+                    text-decoration: underline;
+                }
+
+        .footer-fixed {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 60px;
+            background-color: #ffffff;
+        }
+
+            .footer-fixed .row {
+                padding-top: 10px;
+                border: 0;
+                border-style: solid;
+                border-top-width: 1px;
+                border-color: #8f8f8f;
+            }
+
+            .footer-fixed p {
+                line-height: 30px;
+            }
+
+                .footer-fixed p img {
+                    float: left;
+                    margin-right: 15px;
+                }
+
+                .footer-fixed p a {
+                    display: inline-block;
+                    margin-left: 15px;
+                }
+    </style>
 </head>
 
 
