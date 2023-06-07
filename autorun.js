@@ -1,25 +1,13 @@
-Office.initialize = function (reason) { };
+Office.onReady();
 
-/**
- * Handles the OnNewMessageCompose event.
- */
-function onNewMessageComposeHandler(event) {
-    var xmlhttp = new XMLHttpRequest();
-    
-    xmlhttp.onload = function() {
-        var signature = `<strong style='font-size: 20px; color: greeen'>Success: ${xmlhttp.responseText} </strong>`;
-        Office.context.mailbox.item.body.setSignatureAsync(signature, { coercionType: "html" }, function () { event.completed(); });
-    }
-    
-    xmlhttp.onerror = function() {
-        var signature = `<strong style='font-size: 20px; color: red'>Error: ${xmlhttp.responseText} </strong>`;
-        Office.context.mailbox.item.body.setSignatureAsync(signature, { coercionType: "html" }, function () { event.completed(); });
-    }
-    
-    xmlhttp.open('GET', '/api/get', true);
-    xmlhttp.setRequestHeader("Content-Type", "application/json");
-    
-    xmlhttp.send();
+async function autoRunFunction(event) {
+
+    Office.context.mailbox.item.body.setSignatureAsync(
+        "<table><tr><td><span style='COLOR: #0000FF'>Test signature!</span> <span style='COLOR: #00FF00'>Message with this signature is always </span><span style='COLOR: #FF0000'>saved as draft.</span></td></tr></table>",
+        {
+            "coercionType": "html"
+        },
+        function (asyncResult) {
+            event.completed();
+        });
 }
-
-Office.actions.associate("onNewMessageComposeHandler", onNewMessageComposeHandler);
