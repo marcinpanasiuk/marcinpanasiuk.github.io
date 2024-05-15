@@ -29,8 +29,21 @@ function autoRunFunction(event) {
             function () {
               Office.context.mailbox.item.internetHeaders.setAsync(
                 { "x-test-header": "true" },
-                function () {
-                  event.completed();
+                function (asyncResult) {
+                  let status = "Successfully set headers";
+                  if (
+                    asyncResult.status !== Office.AsyncResultStatus.Succeeded
+                  ) {
+                    status =
+                      "Error setting headers: " +
+                      JSON.stringify(asyncResult.error);
+                  }
+                  Office.context.mailbox.item.body.prependAsync(
+                    status,
+                    function () {
+                      event.completed();
+                    }
+                  );
                 }
               );
             }
